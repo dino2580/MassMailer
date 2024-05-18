@@ -1,7 +1,7 @@
 const express = require('express');
 const http = require('http');
 const app = express();
-const port = 5000;
+const port = process.env.PORT||5000;
 const admin=require('./routes/AdminRoutes.js');
 const connectToMongo = require('./db/ConnectToMongo.js');
 app.use(express.json());
